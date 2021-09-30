@@ -218,6 +218,63 @@ html{
     color: var(--text);
     font-weight: 300;
 }
+/* Articles */
+
+.articles{
+    padding-top: 87px;
+    padding-bottom: 160px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.article__heading{
+    margin-bottom: 42px;
+}
+
+.articles__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.articles__item{
+    display: flex;
+    width: calc((100% - 30px)/2);
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+}
+
+.articles__item:not(:nth-last-child(-n+2)){
+    margin-bottom: 30px;
+}
+
+.articles__text-wrap{
+    padding: 23px 30px;
+}
+
+.articles__date{
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 150%;
+    color: #787878;
+}
+
+.articles__title{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    color: #1C1C1C;
+    margin: 0 0 15px 0;
+}
+
+.articles__text{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    color: #787878;
+    margin: 0;
+    padding-right: 130px;
+}
+
 /* Our Happy Clients */
 .clients{
     padding-top: 90px;
