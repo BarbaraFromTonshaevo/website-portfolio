@@ -4,24 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/normalize.css">
-<!-- Swiper -->
+    <!-- Fonts -->
+    <!-- <link rel="preload" href="./fonts/Montserrat-Bold.woff" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff" as="font">
+    <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Light.woff" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Light.woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Medium.woff" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Regular.woff" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font"> -->
+    <!-- Swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<!-- Accordion -->
+    <!-- Accordion -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
+    <!-- Lazy Load -->
+    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+    <script defer>
     $( function() {
       $( "#accordion" ).accordion();
     } );
     </script>
-    <script src="index.js"></script>
-    
+        <script defer>
+            document.addEventListener('DOMContentLoaded',()=>{
+                var mySwiper = new Swiper('.swiper-container', {
+                // Optional parameters
+                loop: true,
+                // If we need pagination
+                pagination: {
+                el: '.swiper-pagination',
+                },
+                // Navigation arrows
+                navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                },
+                // And if we need scrollbar
+                scrollbar: {
+                el: '.swiper-scrollbar',
+                },
+            })
+            });
+        </script>
+    <script defer src="index.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-
     <title>Евклид</title>
 </head>
 <body>
@@ -130,7 +162,7 @@
                         <a aria-label="Договор" href="" class="hww__contract">Договор</a>
                     </div>
                     <div class="hww__img-wrap">
-                        <img src="./img/Step-1.jpg" alt="" class="hww__img">
+                        <img src="./img/Step-1.webp" alt="" class="lazyload hww__img">
                     </div>
                 </div>
                 <div class="hww__info" data-info="2">
@@ -143,7 +175,7 @@
                         <a aria-label="Договор" href="" class="hww__contract">Договор</a>
                     </div>
                     <div class="hww__img-wrap">
-                        <img src="./img/Step-2.jpg" alt="" class="hww__img">
+                        <img src="./img/Step-2.webp" alt="" class="lazyload hww__img">
                     </div>
                 </div>
                 <div class="hww__info" data-info="3">
@@ -156,7 +188,7 @@
                         <a aria-label="Договор" href="" class="hww__contract">Договор</a>
                     </div>
                     <div class="hww__img-wrap">
-                        <img src="./img/Step-3.jpg" alt="" class="hww__img">
+                        <img src="./img/Step-3.webp" alt="" class="lazyload hww__img">
                     </div>
                 </div>
                 <div class="hww__info" data-info="4">
@@ -169,7 +201,7 @@
                         <a aria-label="Договор" href="" class="hww__contract">Договор</a>
                     </div>
                     <div class="hww__img-wrap">
-                        <img src="./img/Step-4.jpg" alt="" class="hww__img">
+                        <img src="./img/Step-4.webp" alt="" class="lazyload hww__img">
                     </div>
                 </div>
             </div>
@@ -289,30 +321,7 @@
                     Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании стандартных подходов.
                 </p>
             </div>
-
         </div>
     </footer>
-    <script>
-        var mySwiper = new Swiper('.swiper-container', {
-            // Optional parameters
-            loop: true,
-        
-            // If we need pagination
-            pagination: {
-            el: '.swiper-pagination',
-            },
-        
-            // Navigation arrows
-            navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-            },
-        
-            // And if we need scrollbar
-            scrollbar: {
-            el: '.swiper-scrollbar',
-            },
-        })
-    </script>
 </body>
 </html>
