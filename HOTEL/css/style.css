@@ -83,6 +83,30 @@ body{
     margin-bottom: 20px;
     padding-left: 40px;
 }
+.submit{
+    background-color: var(--yellow);
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    transition: background 0.5s;
+}
+.submit:hover{
+    background-color: #A47312;
+}
+.light-button{
+    border: 1px solid var(--yellow);
+    border-radius: 12px;
+    line-height: 1;
+    text-align: center;
+    color: var(--yellow);
+    font-size: 16px;
+    transition: background 0.5s, color 0.5s;
+}
+.light-button:hover{
+    background-color: var(--yellow);
+    color: white;
+}
  /* Header */
  .header__top{
     display: flex;
@@ -99,6 +123,10 @@ body{
     font-size: 22px;
     font-weight: bold;
     color: var(--third-grey);
+    transition: color 0.5s;
+}
+.header__phone:hover{
+    color: var(--yellow);
 }
 .header__privat-office{
     color: var(--yellow);
@@ -125,9 +153,13 @@ body{
 .nav__link{
     font-size: 16px;
     color: var(--black);
+    transition: color 0.5s;
 }
 .nav__item:not(:last-child){
     margin-right: 46px;
+}
+.nav__link:hover{
+    color: var(--yellow);
 }
 .header__search-form{
     display: flex;
@@ -192,13 +224,6 @@ body{
     padding-left: 20px;
     padding-right: 20px;
     margin-right: 25px;
-
-
-    background-color: var(--yellow);
-    border-radius: 12px;
-    border: none;
-    font-size: 16px;
-    color: white;
 }
 .booking__offers{
     display: inline;
@@ -413,14 +438,6 @@ body{
     display: block;
     width: fit-content;
     padding: 12px 18px;
-
-
-    border: 1px solid var(--yellow);
-    border-radius: 12px;
-    line-height: 1;
-    text-align: center;
-    color: var(--yellow);
-    font-size: 16px;
 }
 .accommodation__item_all-variants{
     background-image: url(../img/9.jpg);
@@ -479,11 +496,6 @@ body{
     display: inline-block;
     margin-top: 45px;
     padding: 25px 30px;
-
-    border: 1px solid var(--yellow);
-    border-radius: 12px;
-    color: var(--yellow);
-    line-height: 1;
 } 
 .e-mail{
     color:var(--second-grey);
@@ -534,11 +546,6 @@ body{
     margin-top: 0;
     height: 70px;
     width: 340px;
-    color: white;
-    background-color: var(--yellow);
-    border: none;
-    border-radius: 12px;
-
 }
 /* Footer */
 .footer__wrapper{
@@ -554,7 +561,6 @@ body{
     background-repeat: no-repeat;
     background-position: 730px 115px;
 }
-
 .footer__left-block{
     width: 320px;
     display: flex;
@@ -570,6 +576,7 @@ body{
 }
 .footer__center-info{
     margin-bottom: 28px;
+    color: white;
 }
 .footer__telephones{
     margin-bottom: 26px;
@@ -615,10 +622,6 @@ body{
     height: 25px;
     opacity: 90%;
 }
-.footer__social-icon:hover{
-    filter: drop-shadow(0 0 5px white);
-    box-shadow: 0 0 5px white;
-}
 .footer__social-icon-tripadvisor{
     background-image: url(../img/tripadvisor.svg);
 }
@@ -633,10 +636,6 @@ body{
 }
 .footer__social-icon-google-plus{
     background-image: url(../img/google-plus.svg);
-}
-.footer__center-block p{
-    color: white;
-    font-size: 16px;
 }
 .telephones{
     display: block;
