@@ -1,62 +1,64 @@
+*Read in [Russian](./README.ru.md).*
+
 # website-portfolio
 
-> 🗄️ **Архивный репозиторий (2020–2021).** Учебные вёрстки лендингов из начала моего пути во фронтенд. Код сохранён как память и не развивается: он не отражает мой нынешний уровень и подходы.
+> 🗄️ **Archived repository (2020–2021).** Practice landing pages from the very start of my frontend path. Kept as-is, for memory's sake — it doesn't reflect my current skills or practices.
 
-Три статичных лендинга по макетам (Figma / Photoshop). Без сборки и фреймворков: HTML, CSS и немного JavaScript.
+Three static landing pages built from design files (Figma / Photoshop). No build tools, no frameworks: plain HTML, CSS and a bit of JavaScript.
 
-## Проекты
+## Projects
 
-| Проект | Демо | Что это | Стек | Адаптив |
+| Project | Demo | What it is | Stack | Responsive |
 | --- | --- | --- | --- | --- |
-| [HOTEL](./HOTEL) | [открыть](https://barbarafromtonshaevo.github.io/website-portfolio/HOTEL/) | Лендинг сервиса бронирования отелей. Вёрстка «pixel perfect» | HTML, CSS (flexbox), normalize.css | нет, только десктоп |
-| [LIONIC](./LIONIC) | [открыть](https://barbarafromtonshaevo.github.io/website-portfolio/LIONIC/) | Лендинг юридической компании, секции со статьями | HTML, CSS (flexbox, CSS-переменные), normalize.css | да, 4 брейкпоинта (1200 / 992 / 767 / 400 px) |
-| [EVKLID](./EVKLID) | [открыть](https://barbarafromtonshaevo.github.io/website-portfolio/EVKLID/) | Лендинг с бургер-меню и переключаемыми шагами «как мы работаем» | HTML, CSS (flexbox), JS, Swiper, jQuery UI, lazyload | да, 4 диапазона: 320–767 / 768–1023 / 1024–1919 / от 1920 px |
+| [HOTEL](./HOTEL) | [open](https://barbarafromtonshaevo.github.io/website-portfolio/HOTEL/) | Hotel booking landing page. "Pixel perfect" markup | HTML, CSS (flexbox), normalize.css | no, desktop only |
+| [LIONIC](./LIONIC) | [open](https://barbarafromtonshaevo.github.io/website-portfolio/LIONIC/) | Law firm landing page with article sections | HTML, CSS (flexbox, custom properties), normalize.css | yes, 4 breakpoints (1200 / 992 / 767 / 400 px) |
+| [EVKLID](./EVKLID) | [open](https://barbarafromtonshaevo.github.io/website-portfolio/EVKLID/) | Landing page with a burger menu and a switchable "how we work" steps block | HTML, CSS (flexbox), JS, Swiper, jQuery UI, lazyload | yes, 4 ranges: 320–767 / 768–1023 / 1024–1919 / 1920px+ |
 
-В каждой папке лежит `project documents/` с исходным макетом (`.psd` / `.fig`).
+Each folder has a `project documents/` directory with the original design file (`.psd` / `.fig`).
 
-## Скриншоты
+## Screenshots
 
-Первый экран каждого лендинга.
+The first screen of each landing page.
 
 **HOTEL**
 
-![HOTEL: первый экран на десктопе](./screenshots/hotel-desktop.webp)
+![HOTEL: desktop first screen](./screenshots/hotel-desktop.webp)
 
-**LIONIC** (десктоп и мобильная версия)
+**LIONIC** (desktop and mobile)
 
 <p>
-  <img src="./screenshots/lionic-desktop.webp" alt="LIONIC: первый экран на десктопе" width="68%">
-  <img src="./screenshots/lionic-mobile.webp" alt="LIONIC: первый экран на мобильном" width="22%">
+  <img src="./screenshots/lionic-desktop.webp" alt="LIONIC: desktop first screen" width="68%">
+  <img src="./screenshots/lionic-mobile.webp" alt="LIONIC: mobile first screen" width="22%">
 </p>
 
 **EVKLID**
 
-![EVKLID: первый экран на десктопе](./screenshots/evklid-desktop.webp)
+![EVKLID: desktop first screen](./screenshots/evklid-desktop.webp)
 
-## Как посмотреть
+## How to view
 
-Проще всего открыть ссылку из колонки «Демо»: лендинги опубликованы через GitHub Pages как есть, без сборки.
+Easiest way is the link in the "Demo" column: the pages are published via GitHub Pages exactly as they are, no build step.
 
-Локально: сборки нет, достаточно открыть `index.html` нужного проекта в браузере.
+Locally: there's no build, just open the project's `index.html` in a browser.
 
 ```bash
 git clone https://github.com/BarbaraFromTonshaevo/website-portfolio.git
 xdg-open website-portfolio/LIONIC/index.html   # macOS: open, Windows: start
 ```
 
-EVKLID подключает Swiper, jQuery и lazyload с CDN, поэтому для него нужен интернет.
+EVKLID loads Swiper, jQuery and lazyload from a CDN, so it needs an internet connection.
 
-## Что здесь устарело
+## What's outdated here
 
-Я оставила всё как есть, чтобы было видно, с чего я начинала. Сейчас я бы сделала иначе:
+I left everything as it was, so it stays visible where I started. Today I'd do it differently:
 
-- **Вёрстка и CSS.** Сейчас я использовала бы grid, `clamp()`, подход mobile-first и единую методологию именования. У EVKLID стили лежат минифицированными в одну строку, поэтому `css/style.css` там не читается. HOTEL вообще без адаптива.
-- **Известная ошибка EVKLID.** На экранах уже 768 px первый экран пустой: мобильный CSS подключает фоны `mobile-background-*.jpg`, а в `img/` лежат `.webp`. Белый заголовок оказывается на белом фоне. Ошибку я оставила, как и остальной код.
-- **Шрифты LIONIC не попали в репозиторий.** CSS ссылается на `fonts/open-sans-v18-*.woff2`, но папки `fonts/` нет. Если Open Sans не установлен в системе, браузер покажет запасной шрифт.
-- **Зависимости.** Скрипты подключены с CDN без фиксации версий (`unpkg.com/swiper/…`), а jQuery 1.12.4 давно устарел. Сейчас это были бы npm-пакеты и сборщик.
-- **Доступность и SEO.** Семантические теги и `alt` есть, но нет мета-описаний, `aria` только в EVKLID, а `lang="en"` стоит у русскоязычного EVKLID.
-- **Вес репозитория.** Исходники макетов (`.psd`, `.fig`) занимают около 65 МБ из 130 МБ.
+- **Markup and CSS.** I'd now use grid, `clamp()`, a mobile-first approach and a single naming convention. EVKLID's stylesheet is manually minified into one line, so `css/style.css` there isn't readable. HOTEL has no responsive layout at all.
+- **Known bug in EVKLID.** At 768px and up the first screen is blank: the mobile CSS references `mobile-background-*.jpg` backgrounds, but `img/` only has `.webp` files. The white heading ends up on a white background. I left the bug in, along with the rest of the code.
+- **LIONIC's fonts never made it into the repo.** The CSS references `fonts/open-sans-v18-*.woff2`, but there's no `fonts/` folder. If Open Sans isn't installed system-wide, the browser falls back to a substitute font.
+- **Dependencies.** Scripts are loaded from a CDN without pinned versions (`unpkg.com/swiper/…`), and jQuery 1.12.4 is long outdated. Today these would be npm packages with a bundler.
+- **Accessibility and SEO.** Semantic tags and `alt` attributes are there, but there are no meta descriptions, `aria` only appears in EVKLID, and `lang="en"` is set on EVKLID even though its content is in Russian.
+- **Repository size.** The original design files (`.psd`, `.fig`) account for about 65MB out of 130MB.
 
-## Статус
+## Status
 
-Не поддерживается. Актуальные работы — в моих других репозиториях.
+Not maintained. See my other repositories for current work.
