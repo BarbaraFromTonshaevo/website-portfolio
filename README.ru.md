@@ -1,45 +1,37 @@
-*Читать на [английском](./README.md).*
+# Первые лендинги
 
-# website-portfolio
+[English](README.md) | **Русский**
 
-> 🗄️ **Архивный репозиторий (2020–2021).** Учебные вёрстки лендингов из начала моего пути во фронтенд. Код сохранён как память и не развивается: он не отражает мой нынешний уровень и подходы.
+Три статичных лендинга по макетам (Figma / Photoshop) на HTML, CSS и немного JavaScript, без сборки и фреймворков. Интерфейс EVKLID на русском, HOTEL и LIONIC на английском.
 
-Три статичных лендинга по макетам (Figma / Photoshop). Без сборки и фреймворков: HTML, CSS и немного JavaScript.
+> 🗄️ **Archived** · 2020–2021. Учебные вёрстки лендингов из начала моего пути во фронтенд. Код сохранён как память и не развивается: он не отражает мой нынешний уровень и подходы.
 
-## Проекты
-
-| Проект | Демо | Что это | Стек | Адаптив |
-| --- | --- | --- | --- | --- |
-| [HOTEL](./HOTEL) | [открыть](https://barbarafromtonshaevo.github.io/website-portfolio/HOTEL/) | Лендинг сервиса бронирования отелей. Вёрстка «pixel perfect» | HTML, CSS (flexbox), normalize.css | нет, только десктоп |
-| [LIONIC](./LIONIC) | [открыть](https://barbarafromtonshaevo.github.io/website-portfolio/LIONIC/) | Лендинг юридической компании, секции со статьями | HTML, CSS (flexbox, CSS-переменные), normalize.css | да, 4 брейкпоинта (1200 / 992 / 767 / 400 px) |
-| [EVKLID](./EVKLID) | [открыть](https://barbarafromtonshaevo.github.io/website-portfolio/EVKLID/) | Лендинг с бургер-меню и переключаемыми шагами «как мы работаем» | HTML, CSS (flexbox), JS, Swiper, jQuery UI, lazyload | да, 4 диапазона: 320–767 / 768–1023 / 1024–1919 / от 1920 px |
-
-В каждой папке лежит `project documents/` с исходным макетом (`.psd` / `.fig`).
-
-## Скриншоты
-
-Первый экран каждого лендинга.
-
-**HOTEL**
-
-![HOTEL: первый экран на десктопе](./screenshots/hotel-desktop.webp)
-
-**LIONIC** (десктоп и мобильная версия)
+**Live demo:** у каждого лендинга своя ссылка в разделе [Проекты](#проекты).
 
 <p>
   <img src="./screenshots/lionic-desktop.webp" alt="LIONIC: первый экран на десктопе" width="68%">
   <img src="./screenshots/lionic-mobile.webp" alt="LIONIC: первый экран на мобильном" width="22%">
 </p>
+<p>
+  <img src="./screenshots/hotel-desktop.webp" alt="HOTEL: первый экран на десктопе" width="45%">
+  <img src="./screenshots/evklid-desktop.webp" alt="EVKLID: первый экран на десктопе" width="45%">
+</p>
 
-**EVKLID**
+## Проекты
 
-![EVKLID: первый экран на десктопе](./screenshots/evklid-desktop.webp)
+| Проект | Демо | Что это | Стек | Адаптив |
+| --- | --- | --- | --- | --- |
+| [HOTEL](./HOTEL) | https://barbarafromtonshaevo.github.io/website-portfolio/HOTEL/ | Лендинг сервиса бронирования отелей. Вёрстка «pixel perfect» | HTML, CSS (flexbox), normalize.css | нет, только десктоп |
+| [LIONIC](./LIONIC) | https://barbarafromtonshaevo.github.io/website-portfolio/LIONIC/ | Лендинг юридической компании, секции со статьями | HTML, CSS (flexbox, CSS-переменные), normalize.css | да, 4 брейкпоинта (1200 / 992 / 767 / 400 px) |
+| [EVKLID](./EVKLID) | https://barbarafromtonshaevo.github.io/website-portfolio/EVKLID/ | Лендинг с бургер-меню и переключаемыми шагами «как мы работаем» | HTML, CSS (flexbox), JS, Swiper, jQuery UI, lazyload | да, 4 диапазона: 320–767 / 768–1023 / 1024–1919 / от 1920 px |
+
+В каждой папке лежит `project documents/` с исходным макетом (`.psd` / `.fig`).
 
 ## Как посмотреть
 
 Проще всего открыть ссылку из колонки «Демо»: лендинги опубликованы через GitHub Pages как есть, без сборки.
 
-Локально: сборки нет, достаточно открыть `index.html` нужного проекта в браузере.
+Локально сборки тоже нет, достаточно открыть `index.html` нужного проекта в браузере.
 
 ```bash
 git clone https://github.com/BarbaraFromTonshaevo/website-portfolio.git
@@ -48,7 +40,7 @@ xdg-open website-portfolio/LIONIC/index.html   # macOS: open, Windows: start
 
 EVKLID подключает Swiper, jQuery и lazyload с CDN, поэтому для него нужен интернет.
 
-## Что здесь устарело
+## Известные ограничения
 
 Я оставила всё как есть, чтобы было видно, с чего я начинала. Сейчас я бы сделала иначе:
 
@@ -58,7 +50,3 @@ EVKLID подключает Swiper, jQuery и lazyload с CDN, поэтому д
 - **Зависимости.** Скрипты подключены с CDN без фиксации версий (`unpkg.com/swiper/…`), а jQuery 1.12.4 давно устарел. Сейчас это были бы npm-пакеты и сборщик.
 - **Доступность и SEO.** Семантические теги и `alt` есть, но нет мета-описаний, `aria` только в EVKLID, а `lang="en"` стоит у русскоязычного EVKLID.
 - **Вес репозитория.** Исходники макетов (`.psd`, `.fig`) занимают около 65 МБ из 130 МБ.
-
-## Статус
-
-Не поддерживается. Актуальные работы — в моих других репозиториях.
